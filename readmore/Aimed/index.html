@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Menu responsive</title>
+        
+
+        <style>
+/* Work Flow */
+@font-face {
+	font-family: 'ecoicon';
+	src:url('../fonts/ecoicons/ecoicon.eot');
+	src:url('../fonts/ecoicons/ecoicon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ecoicons/ecoicon.woff') format('woff'),
+		url('../fonts/ecoicons/ecoicon.ttf') format('truetype'),
+		url('../fonts/ecoicons/ecoicon.svg#ecoicon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Work Flow Close */
+            </style>
+        
+        <script src="assets/js/modernizr.custom.js"></script>
+
+        <script>
+            // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("header").style.top = "0px";
+                document.getElementById("header").style.background = "white";
+                document.getElementById("roop1").style.color = "black";
+                document.getElementById("roop2").style.color = "black";
+                document.getElementById("roop3").style.color = "black";
+                document.getElementById("roop4").style.color = "black";
+                document.getElementById("roop5").style.color = "black";
+                document.getElementById("nav__name").style.color = "black";
+            
+                
+                
+              } else {
+                document.getElementById("header").style.top = "70px";
+                document.getElementById("header").style.background = "transparent";
+                document.getElementById("roop1").style.color = "white";
+                document.getElementById("roop2").style.color = "white";
+                document.getElementById("roop3").style.color = "white";
+                document.getElementById("roop4").style.color = "white";
+                document.getElementById("roop5").style.color = "white";
+                document.getElementById("nav__name").style.color = "white";
+              } 
+            }
+            </script>
+
+<script>
+    // Function to reveal lightbox and adding YouTube autoplay
+    function revealVideo(div, video_id) {
+        var video = document.getElementById(video_id).src;
+        document.getElementById(video_id).src = video + '&autoplay=1'; // adding autoplay to the URL
+        document.getElementById(div).style.display = 'block';
+    }
+
+    // Hiding the lightbox and removing YouTube autoplay
+    function hideVideo(div, video_id) {
+        var video = document.getElementById(video_id).src;
+        var cleaned = video.replace('&autoplay=1', ''); // removing autoplay form url
+        document.getElementById(video_id).src = cleaned;
+        document.getElementById(div).style.display = 'none';
+    }
+</script>
+
+    </head>
+    <body>
+	
+	<div id="all">
+	
+        <header id="header">
+            <a href="#" class="header__logo menua">Jhon Doe</a>
+
+            <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+
+            <nav class="nav" id="nav-menu">
+                <div class="nav__content bd-grid">
+
+                    <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
+    
+	
+	
+	
+                    <div class="nav__perfil">
+                        <div class="nav__img">
+                            <img src="assets/img/logo.png" alt="" class="menuimg">
+                        </div>
+                     
+                       <!-- <div>
+                            <a href="#" class="menua" id="nav__name">Jhon Doe</a>
+                            <span class="nav__profesion">Web designer</span>
+                        </div>-->
+                    </div>
+    
+	
+                    <div class="nav__menu">
+                        <ul class="nav__list menuul">
+                            <li class="nav__item"><a href="#" class="nav__link active menua" id="roop1">Home</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link menua" id="roop2">About</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link menua" id="roop3">Skills</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link menua" id="roop4">Portfolio</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link menua" id="roop5">Contact</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="nav__social">
+                        <a href="#" class="nav__social-icon menua"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="#" class="nav__social-icon menua"><ion-icon name="logo-github"></ion-icon></a>
+                        <a href="#" class="nav__social-icon menua"><ion-icon name="logo-behance"></ion-icon></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        
+		<div id="overlay">
+<video autoplay loop="" muted=""><source src="http://nodwingaming.com/videos/NODWIN-esports-Showcase-2018-short1.mp4" type="video/mp4"></video>
+</div>
+		
+		
+
+
+    <div class="container-side">
+        <div class="icon-bar">
+            <a href="#" class="activel"><i class="fa fa-home"></i></a>
+            <a href="#"><i class="fa fa-cog"></i></a>
+            <a href="#"><i class="fa fa-trophy"></i></a>
+            <a href="#"><i class="fa fa-newspaper-o"></i></a>
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-gift"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+</div>
+</div>
+
+
+   <!-- Work Flow -->
+<section id="set-1">
+	
+    <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" >
+        <div class="hi-icon hi-icon-mobile actives" onclick="openCity(event, 'London')" id="defaultOpen">Mobile</div>
+        <div class="hi-icon hi-icon-screen" onclick="openCity(event, 'Paris')">Desktop</div>
+        <div class="hi-icon hi-icon-earth" onclick="openCity(event, 'Tokyo')">Partners</div>
+        <div class="hi-icon hi-icon-support" onclick="openCity(event, 'Newyork')">Support</div>
+        <div class="hi-icon hi-icon-locked" onclick="openCity(event, 'India')">Security</div>	
+    </div>
+    <center>
+        <div id="London" class="tabcontent city"> <h3>Our next step is the construction of a thorough plan.</h3> </div>
+        <div id="Paris" class="tabcontent city"> <h3>We create a bank of concepts and help you navigate towards the best solution.</h3> </div>
+        <div id="Tokyo" class="tabcontent city"> <h3>We make sure that the chosen solution is feasible and efficient within our operational scope.</h3> </div>
+        <div id="Newyork" class="tabcontent city"> <h3>We create a bank of concepts and help you navigate towards the best solution.</h3> </div>
+        <div id="India" class="tabcontent city"> <h3>Our next step is the construction of a thorough plan.</h3> </div>
+    
+    </center>
+    
+ 
+ 
+</section>
+
+<script>
+function openCity(evt, cityName) {
+var i, x, tablinks;
+x = document.getElementsByClassName("city");
+for (i = 0; i < x.length; i++) {
+x[i].style.display = "none";
+}
+tablinks = document.getElementsByClassName("hi-icon");
+for (i = 0; i < x.length; i++) {
+tablinks[i].className = tablinks[i].className.replace(" actives", "");
+}
+document.getElementById(cityName).style.display = "block";
+evt.currentTarget.className += " actives";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<!-- Work flow close -->
+
+
+
+
+
+<!-- Partners -->
+
+<div class="partner">
+    <div data-aos="fade-right">
+        <div class="last">
+            <img src="image/zowie.png">
+        </div>
+        <div class="last">
+            <img src="image/logitech.png">
+        </div>
+        <div class="last">
+            <img src="image/corsair.jpg">
+        </div>
+        <div class="last">
+            <img src="image/hyperx.jpg">
+        </div>
+    </div>
+
+    <div data-aos="fade-left">
+        <div class="last">
+            <img src="image/rog.png">
+        </div>
+        <div class="last">
+            <img src="image/msi.jpg">
+        </div>
+        <div class="last">
+            <img src="image/gigabyte.png">
+        </div>
+        <div class="last">
+            <img src="image/zotac.png">
+        </div>
+    </div>
+
+    <div data-aos="fade-right">
+        <div class="last">
+            <img src="image/nvidia.jpg">
+        </div>
+        <div class="last">
+            <img src="image/amd.png">
+        </div>
+        <div class="last">
+            <img src="image/intel.jpg">
+        </div>
+        <div class="last">
+            <img src="image/qualcomm.jpg">
+        </div>
+    </div>
+
+    <div data-aos="fade-left">
+        <div class="last">
+            <img src="image/steam.jpg">
+        </div>
+        <div class="last">
+            <img src="image/uplay.png">
+        </div>
+        <div class="last">
+            <img src="image/epic.jpg">
+        </div>
+        <div class="last">
+            <img src="image/blizzard.png">
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 3000,
+    });
+</script>
+
+<!-- Partners Close -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Video Grid -->
+
+<div class="child-page-listing">
+
+    <div class="vgrid-container">
+
+
+
+        <article id="3685" class="location-listing" onclick="revealVideo('video','youtube')">
+            <div class="location-title">
+                <a>
+                    <i class="fa fa-youtube-play fa-2x" id="yt"></i>						
+                </a>
+            </div>
+
+            <div class="location-image">
+                <a href="#">
+                    <img class="vimg" width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/san-fransisco-768x432.jpg" alt="san francisco"> </a>
+
+            </div>
+
+        </article>
+
+
+
+
+        <article id="3688" class="location-listing" onclick="revealVideo('video1','youtube1')">
+
+            <div class="location-title">
+                <a>
+                    <i class="fa fa-youtube-play fa-2x" id="yt"></i>						
+                </a>
+            </div>
+
+            <div class="location-image">
+                <a href="#">
+                    <img class="vimg" width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/london-768x432.jpg" alt="london"> </a>
+
+            </div>
+
+        </article>
+
+        <article id="3691" class="location-listing" onclick="revealVideo('video2','youtube2')">
+
+            <div class="location-title">
+                <a>
+                    <i class="fa fa-youtube-play fa-2x" id="yt"></i>						
+                </a>
+            </div>
+
+            <div class="location-image">
+                <a href="#">
+                    <img class="vimg" width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/new-york-768x432.jpg" alt="new york"> </a>
+
+            </div>
+
+
+        </article>
+
+
+
+        <article id="3694" class="location-listing" onclick="revealVideo('video3','youtube3')">
+
+            <div class="location-title">
+                <a>
+                    <i class="fa fa-youtube-play fa-2x" id="yt"></i>						
+                </a>
+            </div>
+
+            <div class="location-image">
+                <a href="#">
+                    <img class="vimg" width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/cape-town-768x432.jpg" alt="cape town"> </a>
+
+            </div>
+
+        </article>
+
+
+
+
+
+        <article id="3697" class="location-listing" onclick="revealVideo('video4','youtube4')">
+
+            <div class="location-title">
+                <a>
+                    <i class="fa fa-youtube-play fa-2x" id="yt"></i>						
+                </a>
+            </div>
+
+            <div class="location-image">
+                <a href="#">
+                    <img class="vimg" width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/beijing-768x432.jpg" alt="beijing"> </a>
+
+            </div>
+
+        </article>
+
+
+
+
+        <article id="3700" class="location-listing" onclick="revealVideo('video5','youtube5')">
+
+            <div class="location-title">
+                <a>
+                    <i class="fa fa-youtube-play fa-2x" id="yt"></i>						
+                </a>
+            </div>
+
+            <div class="location-image">
+                <a href="#">
+                    <img class="vimg" width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/paris-768x432.jpg" alt="paris">
+                </a>
+            </div>
+
+        </article>
+
+
+
+
+
+
+    </div>
+    <!-- end grid container -->
+
+</div>
+
+
+
+<div id="video" class="lightbox" onclick="hideVideo('video','youtube')">
+    <div class="lightbox-container">
+        <div class="lightbox-content">
+
+            <button onclick="hideVideo('video','youtube')" class="lightbox-close">
+          Close | ✕
+        </button>
+            <div class="video-container">
+                <iframe id="youtube" src="https://www.youtube.com/embed/WsptdUFthWI?showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="video1" class="lightbox" onclick="hideVideo('video1','youtube1')">
+    <div class="lightbox-container">
+        <div class="lightbox-content">
+
+            <button onclick="hideVideo('video1','youtube1')" class="lightbox-close">
+          Close | ✕
+        </button>
+            <div class="video-container">
+                <iframe id="youtube1" width="960" height="540" src="https://www.youtube.com/embed/WsptdUFthWI?showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="video2" class="lightbox" onclick="hideVideo('video2','youtube2')">
+    <div class="lightbox-container">
+        <div class="lightbox-content">
+
+            <button onclick="hideVideo('video2','youtube2')" class="lightbox-close">
+          Close | ✕
+        </button>
+            <div class="video-container">
+                <iframe id="youtube2" width="960" height="540" src="https://www.youtube.com/embed/WsptdUFthWI?showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="video3" class="lightbox" onclick="hideVideo('video3','youtube3')">
+    <div class="lightbox-container">
+        <div class="lightbox-content">
+
+            <button onclick="hideVideo('video3','youtube3')" class="lightbox-close">
+          Close | ✕
+        </button>
+            <div class="video-container">
+                <iframe id="youtube3" width="960" height="540" src="https://www.youtube.com/embed/WsptdUFthWI?showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="video4" class="lightbox" onclick="hideVideo('video4','youtube4')">
+    <div class="lightbox-container">
+        <div class="lightbox-content">
+
+            <button onclick="hideVideo('video4','youtube4')" class="lightbox-close">
+      Close | ✕
+    </button>
+            <div class="video-container">
+                <iframe id="youtube4" width="960" height="540" src="https://www.youtube.com/embed/WsptdUFthWI?showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="video5" class="lightbox" onclick="hideVideo('video5','youtube5')">
+    <div class="lightbox-container">
+        <div class="lightbox-content">
+
+            <button onclick="hideVideo('video5','youtube5')" class="lightbox-close">
+          Close | ✕
+        </button>
+            <div class="video-container">
+                <iframe id="youtube5" width="960" height="540" src="https://www.youtube.com/embed/WsptdUFthWI?showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Video Grid Close -->
+
+<!-- fotter -->
+<div class="footer-wrapper">
+    <div class="container-fluid">
+        <div class="footer-social-icons">
+            <ul>
+                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                
+            </ul>
+        </div>
+        <div class="footer-mid-part">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="footer-section-one">
+                    <div class="footer-heading"><h2>Contact Us</h2></div>
+
+                    <div class="footer-contact-box">
+                    <div class="footer-contact-icon"><i class="fa fa-map-marker"></i></div>
+                    <div class="footer-contact-text">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                            Eum mollitia eos consequatur illo cupiditate iusto et vero, </p>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+                <div class="footer-contact-box">
+                    <div class="footer-contact-icon"><i class="fa fa-phone"></i></div>
+                    <div class="footer-contact-text">
+                        <p><a href="tel: 091XXXXXXX">091XXXXXXX</a></p>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+                <div class="footer-contact-box">
+                    <div class="footer-contact-icon"><i class="fa fa-fax"></i></div>
+                    <div class="footer-contact-text">
+                        <p><a href="fax: 091XXXXXXX">091XXXXXXX</a></p>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+                <div class="footer-contact-box">
+                    <div class="footer-contact-icon"><i class="fa fa-envelope"></i></div>
+                    <div class="footer-contact-text">
+                        <p><a href="E-mail: XXXXXXXX@gmail.com">XXXXXXXX@gmail.com</a></p>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="footer-section-two">
+                    <div class="footer-heading"><h2>Quick Link</h2></div>
+                    <div class="footer-link">
+                          <ul>
+                              <li><a href= "#">Home</a></li>
+                              <li><a href="#">About Us</a></li>
+                              <li><a href="#">Services</a></li>
+                              <li><a href="#">Contact Us</a></li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="footer-section-two">
+                    <div class="footer-heading"><h2>Helpful Link</h2></div>
+                    <div class="footer-link">
+                          <ul>
+                              <li><a href="#">Services</a></li>
+                              <li><a href="#">Supports</a></li>
+                              <li><a href="#">Terms & Condition</a></li>
+                              <li><a href="#">Privacy Policy</a></li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="footer-section-three">
+                    <div class="footer-heading"><h2>Get in touch</h2></div>
+                    <div class="footer-form">
+                        <form method="post" action="#">
+                            <div class="footer-form-box">
+                                <input type="text" class="footer-form-style" placeholder="Name">
+                            </div>
+                            <div class="footer-form-box">
+                                <input type="text" class="footer-form-style" placeholder="Email">
+                            </div>
+                            <div class="footer-form-box">
+                                <input type="text" class="footer-form-style" placeholder="Phone Number">
+                            </div>
+                            <div class="footer-form-box">
+                                <input type="submit" class="footer-form-submit-style" value="SUBMIT">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <p>Copyright &copy; INFONITA. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+</div>
+<!-- footer end -->
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ===== IONICONS ===== -->
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    
+        
+        
+
+			
+    </body>
+</html>
